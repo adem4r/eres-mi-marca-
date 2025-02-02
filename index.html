@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Propuesta</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        button { padding: 10px 20px; font-size: 16px; }
+        .container { max-width: 360px; margin: auto; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Propuesta</h1>
+        <p>Gracias por ser mi marca. Eres una persona muy especial para mí. En el poco tiempo tuvimos tantas cosas juntos la cual compartimos y yo quiero darme la oportunidad de decirte que quiero ser tu marca, porque si me gustas mucho Vania. ¿Quieres ser mi novia? 🥹 Si no me corto con una galleta jajaja</p>
+        <button onclick="respuestaSi()">Sí</button>
+        <button onclick="respuestaNo()">No</button>
+        <p id="respuesta"></p>
+    </div>
+    <script>
+        let noCount = 0;
+        function respuestaSi() {
+            document.getElementById('respuesta').innerHTML = 'Sabía que sí te gustaba 😏. Fuera de bromas, me pone muy feliz 🥹. Te quiero 🦆 da la vida.';
+        }
+        function respuestaNo() {
+            noCount += 1;
+            if (noCount == 1) {
+                document.getElementById('respuesta').innerHTML = '¿Segura que no? 🥹';
+            } else if (noCount == 2) {
+                document.getElementById('respuesta').innerHTML = 'Na, no te permito xd';
+            } else if (noCount == 3) {
+                document.getElementById('respuesta').innerHTML = 'Bueno, si es lo que pides :\')';
+            } else if (noCount >= 4) {
+                document.getElementById('respuesta').innerHTML = 'Gracias por ser honesta. Hubiese querido que surgiera algo entre nosotros. :\')';
+            }
+        }
+    </script>
+</body>
+</html>
